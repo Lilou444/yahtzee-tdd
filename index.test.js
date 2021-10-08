@@ -24,10 +24,8 @@ describe("test", function () {
 
   //Test Partie Bonus
   describe("Test bonus", function () {
-    var sm = Bonus;
-
-    it("should return Fizz", function () {
-      expect(sm.bonus()).toBe(50);
+    it("should return bonus", function () {
+      expect(yahtzee.bonus(60));
     });
   });
 });

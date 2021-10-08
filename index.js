@@ -1,5 +1,7 @@
 class Yahtzee {
-  constructor() {}
+  constructor() {
+    this.totalScore = 0;
+  }
 
   roll() {
     let dice = [];
@@ -19,6 +21,17 @@ class Yahtzee {
     }
     console.log(dice);
     return dice;
+  }
+
+  bonus(i){
+    this.totalScore = i;
+    if(this.totalScore >= 63){
+      this.totalScore += 35;
+    } else {
+      console.log("Pas de bonus");
+    }
+    console.log("Score + bonus", this.totalScore);
+    return i;
   }
 }
 
