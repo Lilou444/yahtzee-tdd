@@ -1,12 +1,14 @@
 class Yahtzee {
   constructor() {
     this.totalScore = 0;
+    this.dice = [];
+    this.points = 0;
   }
 
   roll() {
     let dice = [];
 
-    for (var i = 0; i < 5; ++i) {
+    for (let i = 0; i < 5; ++i) {
       dice[i] = Math.floor(Math.random() * 6) + 1;
     }
     console.log(dice);
@@ -16,7 +18,7 @@ class Yahtzee {
   rollWithSave() {
     let dice = [];
 
-    for (var i = 0; i < 5; ++i) {
+    for (let i = 0; i < 5; ++i) {
       dice[i] = Math.floor(Math.random() * 6) + 1;
     }
     console.log(dice);
@@ -33,6 +35,24 @@ class Yahtzee {
     console.log("Score + bonus", this.totalScore);
     return i;
   }
+  
+  identicalDice(tabDice,i){
+      this.dice = tabDice
+      console.log(this.dice)
+      this.points = i
+      for(let j = 0; j < this.dice.length - 1; j++) {
+        if(this.dice[j] !== this.dice[j+1]) {
+            console.log("pas identique")
+            return false;
+        }
+    }
+    this.points += 50
+    console.log(this.points)
+    return this.points
+  }
+
+
+
 }
 
 module.exports = Yahtzee;

@@ -30,9 +30,10 @@ describe("test", function () {
   });
 
   describe("Test YAHTZEE", function () {
-    let dice = [3,3,3,3,3];
+    let dice = [3,3,3,2,3];
+    let i = 6;
     it("dice should be identical", function () {
-      expect(yahtzee.identicalDice(dice));
+      expect(yahtzee.identicalDice(dice,i));
     });
   });
 
