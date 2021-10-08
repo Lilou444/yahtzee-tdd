@@ -11,7 +11,7 @@ class Yahtzee {
     for (let i = 0; i < 5; ++i) {
       dice[i] = Math.floor(Math.random() * 6) + 1;
     }
-    console.log(dice);
+
     return dice;
   }
 
@@ -21,7 +21,7 @@ class Yahtzee {
     for (let i = 0; i < 5; ++i) {
       dice[i] = Math.floor(Math.random() * 6) + 1;
     }
-    console.log(dice);
+
     return dice;
   }
 
@@ -32,22 +32,24 @@ class Yahtzee {
     } else {
       console.log("Pas de bonus");
     }
-    console.log("Score + bonus", this.totalScore);
+
     return i;
   }
 
   identicalDice(tabDice, i) {
     this.dice = tabDice;
-    console.log(this.dice);
+
     this.points = i;
+
     for (let j = 0; j < this.dice.length - 1; j++) {
       if (this.dice[j] !== this.dice[j + 1]) {
         console.log("pas identique");
         return false;
       }
     }
+
     this.points += 50;
-    console.log(this.points);
+
     return this.points;
   } // Ici la valeur de retour est 56 car on part dans l'idée que 6 (soit la valeur de i) est la valeur du score actuel
 
@@ -57,8 +59,58 @@ class Yahtzee {
     for (let j = 0; j < this.dice.length; j++) {
       this.points += this.dice[j];
     }
-    console.log(this.points);
+
     return this.points;
+  }
+
+  upperSectionCombinations(tabDice, nb) {
+    this.dice = tabDice;
+    this.points = 0;
+    for (let j = 0; j < this.dice.length; j++) {
+      if (this.dice[j] == nb) {
+        this.points += this.dice[j];
+      }
+    }
+
+    return this.points;
+  }
+
+  smallStraight(tabDice) {
+    this.dice = tabDice;
+    let scoreSmallStraight = 0;
+    let tab = this.dice.sort();
+    let length = 0;
+    for (var i = 0; i < tab.length - 1; i++) {
+      if (tab[i + 1] - tab[i] === 1) {
+        length += 1;
+      }
+    }
+    if (length >= 3) {
+      scoreSmallStraight = 30;
+    } else {
+      scoreSmallStraight = 0;
+    }
+
+    return scoreSmallStraight;
+  }
+
+  largeStraight(tabDice) {
+    this.dice = tabDice;
+    let scoreLargeStraight = 0;
+    let tab = this.dice.sort();
+    let length = 0;
+    for (var i = 0; i < tab.length - 1; i++) {
+      if (tab[i + 1] - tab[i] === 1) {
+        length += 1;
+      }
+    }
+    if (length >= 4) {
+      scoreLargeStraight = 40;
+    } else {
+      scoreLargeStraight = 0;
+    }
+
+    return scoreLargeStraight;
   }
 }
 
