@@ -120,6 +120,25 @@ class Yahtzee {
 
     return scoreSmallStraight;
   }
+
+  largeStraight(tabDice) {
+    this.dice = tabDice;
+    let scoreLargeStraight = 0;
+    let tab = this.dice.sort();
+    let length = 0;
+    for (var i = 0; i < tab.length - 1; i++) {
+      if (tab[i + 1] - tab[i] === 1) {
+        length += 1;
+      }
+    }
+    if (length >= 4) {
+      scoreLargeStraight = 40;
+    } else {
+      scoreLargeStraight = 0;
+    }
+
+    return scoreLargeStraight;
+  }
 }
 
 module.exports = Yahtzee;

@@ -45,10 +45,26 @@ describe("test", function () {
   });
 
   describe("Test Chance", function () {
-    let dice = [1, 1, 1, 6, 6];
+    let dice = [1, 4, 1, 6, 6];
 
     it("dice should be chance", function () {
-      expect(yahtzee.chance(dice));
+      expect(yahtzee.chance(dice)).to.be.equal(18);
+    });
+  });
+
+  describe("Test Small straight", function () {
+    let dice = [1, 2, 3, 4, 6];
+
+    it("dice should be small straight", function () {
+      expect(yahtzee.smallStraight(dice)).to.be.equal(30);
+    });
+  });
+
+  describe("Test Large straight", function () {
+    let dice = [2, 3, 4, 5, 6];
+
+    it("dice should be large straight", function () {
+      expect(yahtzee.largeStraight(dice)).to.be.equal(40);
     });
   });
 
@@ -61,11 +77,11 @@ describe("test", function () {
   // });
 
   describe("Test upper section combinations", function () {
-    let dice = [2, 2, 2, 6, 6];
+    let dice = [2, 4, 2, 6, 6];
     let nb = 6;
 
     it("should return numbers score", function () {
-      expect(yahtzee.upperSectionCombinations(dice, nb));
+      expect(yahtzee.upperSectionCombinations(dice, nb)).to.be.equal(12);
     });
   });
 });
