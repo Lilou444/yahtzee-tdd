@@ -74,6 +74,24 @@ class Yahtzee {
     return this.points;
   }
 
+
+  //Calculates score for a small straight
+  smallStraight(tabDice) {
+    this.dice = tabDice;
+    let scoreSmallStraight = 0;
+    let tab = this.dice.sort();
+    let length = 0;
+    for (var i = 0; i < tab.length - 1; i++) {
+      if (tab[i + 1] - tab[i] === 1) {
+        length += 1;
+      }
+    }
+    if (length >= 3) {
+      scoreSmallStraight = 30;
+    }
+    console.log(scoreSmallStraight);
+    return scoreSmallStraight;
+  }
 }
 
 module.exports = Yahtzee;
