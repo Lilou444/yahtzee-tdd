@@ -89,6 +89,15 @@ describe("test", function () {
   });
   
 
+  describe("Test fourOfKind", function () {
+    let dice = [6, 6, 5, 6, 4];
+
+    it("dice should be fourOfKind", function () {
+      expect(yahtzee.fourOfKind(dice)).to.be.equal(27);
+    });
+  });
+  
+
   describe("Test upper section combinations", function () {
     let dice = [2, 4, 2, 6, 6];
     let nb = 6;
@@ -97,4 +106,5 @@ describe("test", function () {
       expect(yahtzee.upperSectionCombinations(dice, nb)).to.be.equal(12);
     });
   });
+
 });
