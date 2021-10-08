@@ -95,4 +95,16 @@ describe("test", function () {
       expect(yahtzee.upperSectionCombinations(dice, nb)).to.be.equal(12);
     });
   });
+<<<<<<< Updated upstream
+=======
+
+  describe("Test sum combinations", function () {
+    let dice = [2, 4, 2, 6, 6];
+
+    it("should return numbers score", function () {
+      expect(yahtzee.sumCombinations(dice));
+    });
+  });
+
+>>>>>>> Stashed changes
 });

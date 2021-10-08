@@ -156,6 +156,16 @@ class Yahtzee {
     return this.points;
   }
 
+  sumCombinations(tabDice){
+    this.points = 0;
+    this.dice = tabDice;
+    for (let j = 1; j <= 6; j++) {
+      this.points += this.upperSectionCombinations(this.dice, j)
+      console.log(this.points);
+    }
+    console.log(this.points);
+  }
+
   smallStraight(tabDice) {
     this.dice = tabDice;
     let scoreSmallStraight = 0;
