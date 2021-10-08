@@ -58,6 +58,14 @@ describe("test", function () {
     });
   });
 
+  describe("Test Large straight", function () {
+    let dice = [1, 1, 1, 6, 6];
+
+    it("dice should be chance", function () {
+      expect(yahtzee.largeStraight(dice));
+    });
+  });
+
   // describe("Test FullHouse", function () {
   //   let dice = [1, 1, 1, 6, 6];
 
