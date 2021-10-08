@@ -68,13 +68,17 @@ describe("test", function () {
     });
   });
 
-  // describe("Test FullHouse", function () {
-  //   let dice = [1, 1, 1, 6, 6];
+  describe("Test FullHouse", function () {
+    it("should return fullHouse score", function () {
+      let dice = [5, 6, 6, 5, 6];
+      expect(yahtzee.fullHouse(dice)).to.be.equal(25);
+    });
 
-  //   it("should return fullHouse score", function () {
-  //     expect(yahtzee.fullHouse(dice)).to.be.equal(25);
-  //   });
-  // });
+    it("should return 0", function () {
+      let dice = [5, 6, 4, 5, 6];
+      expect(yahtzee.fullHouse(dice)).to.be.equal(0);
+    });
+  });
 
   describe("Test threeOfKind", function () {
     let dice = [6, 6, 5, 6, 4];

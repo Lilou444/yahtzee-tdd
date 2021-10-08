@@ -90,6 +90,37 @@ class Yahtzee {
     }
   }
 
+  fullHouse(tabDice) {
+    this.dice = tabDice;
+    let score = 0;
+
+    let frequency = {};
+    let max = 0;
+    let most;
+    for (var i in this.dice) {
+      frequency[this.dice[i]] = (frequency[this.dice[i]] || 0) + 1;
+      if (frequency[this.dice[i]] > max) {
+        max = frequency[this.dice[i]];
+        most = this.dice[i];
+      }
+
+      if (max === 3) {
+        this.dice = this.dice.filter((value) => {
+          return value != most;
+        });
+
+        if (
+          this.dice.every((val, i, arr) => val == arr[0]) &&
+          this.dice.length === 2
+        ) {
+          score = 25;
+        }
+      }
+    }
+    console.log(score);
+    return score;
+  }
+
   upperSectionCombinations(tabDice, nb) {
     this.dice = tabDice;
     this.points = 0;
