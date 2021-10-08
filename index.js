@@ -44,16 +44,12 @@ class Yahtzee {
       if (this.dice[j] !== this.dice[j + 1]) {
         console.log("pas identique");
         return false;
-      } else {
-        let point = 0;
-        point += 50;
-        this.points = 50;
       }
     }
-
+    this.points += 50;
     console.log(this.points);
     return this.points;
-  }
+  } // Ici la valeur de retour est 56 car on part dans l'idée que 6 (soit la valeur de i) est la valeur du score actuel
 
   chance(tabDice) {
     this.dice = tabDice;
