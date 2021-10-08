@@ -11,7 +11,7 @@ class Yahtzee {
     for (let i = 0; i < 5; ++i) {
       dice[i] = Math.floor(Math.random() * 6) + 1;
     }
-    console.log(dice);
+
     return dice;
   }
 
@@ -21,7 +21,7 @@ class Yahtzee {
     for (let i = 0; i < 5; ++i) {
       dice[i] = Math.floor(Math.random() * 6) + 1;
     }
-    console.log(dice);
+
     return dice;
   }
 
@@ -32,22 +32,24 @@ class Yahtzee {
     } else {
       console.log("Pas de bonus");
     }
-    console.log("Score + bonus", this.totalScore);
+
     return i;
   }
 
   identicalDice(tabDice, i) {
     this.dice = tabDice;
-    console.log(this.dice);
+
     this.points = i;
+
     for (let j = 0; j < this.dice.length - 1; j++) {
       if (this.dice[j] !== this.dice[j + 1]) {
         console.log("pas identique");
         return false;
       }
     }
+
     this.points += 50;
-    console.log(this.points);
+
     return this.points;
   } // Ici la valeur de retour est 56 car on part dans l'idée que 6 (soit la valeur de i) est la valeur du score actuel
 
@@ -57,7 +59,7 @@ class Yahtzee {
     for (let j = 0; j < this.dice.length; j++) {
       this.points += this.dice[j];
     }
-    console.log(this.points);
+
     return this.points;
   }
 
@@ -89,7 +91,7 @@ class Yahtzee {
     if (length >= 3) {
       scoreSmallStraight = 30;
     }
-    console.log(scoreSmallStraight);
+
     return scoreSmallStraight;
   }
 }
