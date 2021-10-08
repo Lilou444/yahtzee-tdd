@@ -28,4 +28,13 @@ describe("test", function () {
       expect(yahtzee.bonus(60));
     });
   });
+
+  describe("Test YAHTZEE", function () {
+    let dice = [3,3,3,3,3];
+    it("dice should be identical", function () {
+      expect(yahtzee.identicalDice(dice));
+    });
+  });
+
+
 });
