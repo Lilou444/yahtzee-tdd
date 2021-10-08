@@ -68,18 +68,6 @@ describe("test", function () {
     });
   });
 
-  describe("Test FullHouse", function () {
-    it("should return fullHouse score", function () {
-      let dice = [5, 6, 6, 5, 6];
-      expect(yahtzee.fullHouse(dice)).to.be.equal(25);
-    });
-
-    it("should return 0", function () {
-      let dice = [5, 6, 4, 5, 6];
-      expect(yahtzee.fullHouse(dice)).to.be.equal(0);
-    });
-  });
-
   describe("Test threeOfKind", function () {
     let dice = [6, 6, 5, 6, 4];
 
@@ -87,16 +75,17 @@ describe("test", function () {
       expect(yahtzee.threeOfKind(dice)).to.be.equal(27);
     });
   });
-  
 
   describe("Test fourOfKind", function () {
-    let dice = [6, 6, 5, 6, 4];
-
     it("dice should be fourOfKind", function () {
-      expect(yahtzee.fourOfKind(dice)).to.be.equal(27);
+      let dice = [5, 5, 5, 5, 1];
+      expect(yahtzee.fourOfKind(dice)).to.be.equal(21);
+    });
+    it("dice should be fourOfKind", function () {
+      let dice = [6, 6, 5, 6, 4];
+      expect(yahtzee.fourOfKind(dice)).to.be.equal(0);
     });
   });
-  
 
   describe("Test upper section combinations", function () {
     let dice = [2, 4, 2, 6, 6];
@@ -106,5 +95,4 @@ describe("test", function () {
       expect(yahtzee.upperSectionCombinations(dice, nb)).to.be.equal(12);
     });
   });
-
 });
