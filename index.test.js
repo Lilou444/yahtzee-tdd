@@ -30,10 +30,15 @@ describe("test", function () {
   });
 
   describe("Test YAHTZEE", function () {
-    let dice = [3, 3, 3, 2, 3];
-    let i = 6;
     it("dice should be identical", function () {
-      expect(yahtzee.identicalDice(dice, i));
+      let dice = [3, 3, 3, 3, 3];
+      let i = 6;
+      expect(yahtzee.identicalDice(dice, i)).to.be.equal(50);
+    });
+    it("dice should not be identical", function () {
+      let dice = [3, 3, 2, 3, 3];
+      let i = 6;
+      expect(yahtzee.identicalDice(dice, i)).to.be.equal(false);
     });
   });
 
@@ -49,7 +54,7 @@ describe("test", function () {
     let dice = [1, 1, 1, 6, 6];
 
     it("should return fullHouse score", function () {
-      expect(yahtzee.fullHouse(dice));
+      expect(yahtzee.fullHouse(dice)).to.be.equal(25);
     });
   });
 });
