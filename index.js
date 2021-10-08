@@ -51,7 +51,15 @@ class Yahtzee {
     return this.points
   }
 
-
+  chance(tabDice) {
+    this.dice = tabDice;
+    this.points = 0;
+    for(let j = 0; j < this.dice.length; j++) {
+      this.points += this.dice[j];
+    }
+    console.log(this.points)
+    return this.points
+  }
 
 }
 
