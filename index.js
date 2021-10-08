@@ -63,6 +63,33 @@ class Yahtzee {
     return this.points;
   }
 
+  threeOfKind(tabDice) {
+    this.dice = tabDice;
+    let scoreTOK = 0;
+    let frequency = {};
+    let max = 0;
+    let most;
+    for (let i in this.dice) {
+      frequency[this.dice[i]] = (frequency[this.dice[i]] || 0) + 1;
+      if (frequency[this.dice[i]] > max) {
+        max = frequency[this.dice[i]];
+        most = this.dice[i];
+      }
+    }
+    let isSameNum = max;
+    if (isSameNum >= 3) {
+      for (let i = 0; i < this.dice.length; i++) {
+        scoreTOK += this.dice[i];
+        console.log(scoreTOK);
+      }
+      console.log(scoreTOK);
+      return scoreTOK;
+    } else {
+      console.log(scoreTOK);
+      return scoreTOK;
+    }
+  }
+
   upperSectionCombinations(tabDice, nb) {
     this.dice = tabDice;
     this.points = 0;

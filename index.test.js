@@ -59,10 +59,6 @@ describe("test", function () {
   //     expect(yahtzee.fullHouse(dice)).to.be.equal(25);
   //   });
   // });
-  //   it("should return fullHouse score", function () {
-  //     expect(yahtzee.fullHouse(dice));
-  //   });
-  // });
 
   describe("Test upper section combinations", function () {
     let dice = [2, 2, 2, 6, 6];
