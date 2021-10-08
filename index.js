@@ -63,21 +63,18 @@ class Yahtzee {
     return this.points;
   }
 
-  upperSectionCombinations(tabDice, nb){
+  upperSectionCombinations(tabDice, nb) {
     this.dice = tabDice;
     this.points = 0;
-    for(let j = 0; j < this.dice.length; j++) {
-      if(this.dice[j] == nb){
+    for (let j = 0; j < this.dice.length; j++) {
+      if (this.dice[j] == nb) {
         this.points += this.dice[j];
       }
-      
     }
-    console.log('this.points',this.points)
+
     return this.points;
   }
 
-
-  //Calculates score for a small straight
   smallStraight(tabDice) {
     this.dice = tabDice;
     let scoreSmallStraight = 0;
@@ -99,6 +96,3 @@ class Yahtzee {
 }
 
 module.exports = Yahtzee;
-
-
-
