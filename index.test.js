@@ -47,7 +47,7 @@ describe("test", function () {
 {  
 	var sm = Bonus ;
 
-    it('should return Fizz', function () {
+    it('should return bonus', function () {
         expect(sm.bonus()).toBe(50);
     });
 }); 
