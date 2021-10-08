@@ -75,6 +75,8 @@ class Yahtzee {
     }
     if (length >= 3) {
       scoreSmallStraight = 30;
+    } else {
+      scoreSmallStraight = 0;
     }
 
     return scoreSmallStraight;
