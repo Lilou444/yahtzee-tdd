@@ -68,13 +68,13 @@ describe("test", function () {
     });
   });
 
-  describe("Test FullHouse", function () {
-    let dice = [1, 1, 1, 6, 6];
+  // describe("Test FullHouse", function () {
+  //   let dice = [1, 1, 1, 6, 6];
 
-    it("should return fullHouse score", function () {
-      expect(yahtzee.fullHouse(dice)).to.be.equal(25);
-    });
-  });
+  //   it("should return fullHouse score", function () {
+  //     expect(yahtzee.fullHouse(dice)).to.be.equal(25);
+  //   });
+  // });
 
   describe("Test threeOfKind", function () {
     let dice = [6, 6, 5, 6, 4];
