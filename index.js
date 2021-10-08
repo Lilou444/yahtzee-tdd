@@ -105,12 +105,10 @@ class Yahtzee {
     if (isSameNum >= 4) {
       for (let i = 0; i < this.dice.length; i++) {
         scoreTOK += this.dice[i];
-        console.log(scoreTOK);
       }
-      console.log(scoreTOK);
+
       return scoreTOK;
     } else {
-      console.log(scoreTOK);
       return scoreTOK;
     }
   }
