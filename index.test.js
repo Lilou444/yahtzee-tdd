@@ -41,4 +41,14 @@ describe("test", function () {
   // it("should print FizzBuzz", function () {
   //   expect(fb.fizzBuzz(30, 15)).toBe("FizzBuzz");
   // });
+
+  // Test Partie Bonus 
+  describe("Test bonus", function()  
+{  
+	var sm = Bonus ;
+
+    it('should return Fizz', function () {
+        expect(sm.bonus()).toBe(50);
+    });
+}); 
 });
