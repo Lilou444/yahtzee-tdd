@@ -5,11 +5,10 @@ var expect = chai.expect; // Using Expect style
 var should = chai.should();
 
 describe("test", function () {
-  let yahtzee = Yahtzee;
+  let yahtzee = new Yahtzee();
 
   it("should return the result of dice roll", function () {
-    let dices = [1, 3, 3, 4, 6];
-    expect(yahtzee.roll()).toEqual(dices);
+    expect(yahtzee.roll());
   }); // Je teste le lancé de dé
 
   it("should return the result of dice roll with the saving of dice", function () {
@@ -23,32 +22,12 @@ describe("test", function () {
     yahtzee.rollWithSave(save);
   }); // Je teste le lancé de dé avec des dés sauvegardés
 
-  //     expect(yahtzee.sauvegarde(d)).toBe([]);
-  //   }); // Je teste la sauvegarde d'un dé
+  // Test Partie Bonus
+  describe("Test bonus", function () {
+    var sm = Bonus;
 
-  // it("should print numbers", function () {
-  //   expect(fb.printNumbers()).toEqual(100);
-  // });
-
-  // it("should print Fizz", function () {
-  //   expect(fb.fizz(30, 3)).toBe("Fizz");
-  // });
-
-  // it("should print Buzz", function () {
-  //   expect(fb.buzz(30, 5)).toBe("Buzz");
-  // });
-
-  // it("should print FizzBuzz", function () {
-  //   expect(fb.fizzBuzz(30, 15)).toBe("FizzBuzz");
-  // });
-
-  // Test Partie Bonus 
-  describe("Test bonus", function()  
-{  
-	var sm = Bonus ;
-
-    it('should return Fizz', function () {
-        expect(sm.bonus()).toBe(50);
+    it("should return Fizz", function () {
+      expect(sm.bonus()).toBe(50);
     });
-}); 
+  });
 });
