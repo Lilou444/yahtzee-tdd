@@ -30,6 +30,8 @@ describe("test", function () {
   });
 
   describe("Test YAHTZEE", function () {
+    let dice = [3, 3, 3, 3, 3];
+    let i = 6;
     it("dice should be identical", function () {
       let dice = [3, 3, 3, 3, 3];
       let i = 6;
@@ -57,4 +59,17 @@ describe("test", function () {
   //     expect(yahtzee.fullHouse(dice)).to.be.equal(25);
   //   });
   // });
+  //   it("should return fullHouse score", function () {
+  //     expect(yahtzee.fullHouse(dice));
+  //   });
+  // });
+
+  describe("Test upper section combinations", function () {
+    let dice = [2, 2, 2, 6, 6];
+    let nb = 6;
+
+    it("should return numbers score", function () {
+      expect(yahtzee.upperSectionCombinations(dice, nb));
+    });
+  });
 });
