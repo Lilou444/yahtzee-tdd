@@ -19,10 +19,10 @@ describe("test", function () {
     let d5 = 6;
     let save = [d1, d2];
 
-    yahtzee.rollWithSave(save);
+    expect(yahtzee.rollWithSave(save));
   }); // Je teste le lancé de dé avec des dés sauvegardés
 
-  // Test Partie Bonus
+  //Test Partie Bonus
   describe("Test bonus", function () {
     var sm = Bonus;
 
