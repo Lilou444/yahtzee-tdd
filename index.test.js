@@ -95,8 +95,7 @@ describe("test", function () {
       expect(yahtzee.upperSectionCombinations(dice, nb)).to.be.equal(12);
     });
   });
-<<<<<<< Updated upstream
-=======
+
 
   describe("Test sum combinations", function () {
     let dice = [2, 4, 2, 6, 6];
@@ -106,5 +105,5 @@ describe("test", function () {
     });
   });
 
->>>>>>> Stashed changes
+
 });
